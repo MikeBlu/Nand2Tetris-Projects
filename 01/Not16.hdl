@@ -28,5 +28,4 @@ CHIP Not16 {
     Not (in=in[13], out=out[13]);
     Not (in=in[14], out=out[14]);
     Not (in=in[15], out=out[15]);
-    //// Replace this comment with your code.
 }
