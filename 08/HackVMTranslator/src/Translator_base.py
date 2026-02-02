@@ -64,7 +64,7 @@ def vmTranslate(kwargs: dict) -> bool:
                 asm_instructions = parse_branch_command(command,args,line_indx)
             elif command in ['function','call','return']:
                 asm_instructions = parse_function_command(command, args, line_indx, global_ref=class_ref)
-            elif command in ['%CLASS-REF%']: # sepcify static environment
+            elif command in ['%CLASS-REF%']: # specify static environment
                 class_ref = args[0]
                 continue
             else:
@@ -80,5 +80,6 @@ def vmTranslate(kwargs: dict) -> bool:
                 asm_file.flush()
 
         asm_file.truncate(asm_file.tell() - 1) # remove last trailing newline
+
 
     return True
